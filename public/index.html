@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RSA Generator</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <div>
+
+                <h1>RSA Generator</h1>
+
+                <p>Secure RSA Encryption Tool using Node.js & Express</p>
+
+            </div>
+
+        </div>
+
+        <button id="themeBtn">
+
+            <i class="fa-solid fa-moon"></i>
+
+        </button>
+
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <h2>Generate • Encrypt • Decrypt</h2>
+
+        <p>
+
+            Fast, Secure and Modern RSA Encryption Toolkit.
+
+        </p>
+
+    </section>
+
+    <!-- GENERATE KEY CARD -->
+
+    <section class="card">
+
+        <h2>
+
+            <i class="fa-solid fa-key"></i>
+
+            Generate RSA Keys
+
+        </h2>
+
+        <div class="generateRow">
+
+            <div>
+
+                <label>
+
+                    Key Size
+
+                </label>
+
+                <select id="keySize">
+
+                    <option>1024</option>
+
+                    <option selected>2048</option>
+
+                    <option>3072</option>
+
+                    <option>4096</option>
+
+                </select>
+
+            </div>
+
+            <div class="buttonGroup">
+
+                <button id="generateBtn">
+
+                    <i class="fa-solid fa-bolt"></i>
+
+                    Generate Keys
+
+                </button>
+
+                <button id="clearBtn">
+
+                    <i class="fa-solid fa-trash"></i>
+
+                    Clear All
+
+                </button>
+
+            </div>
+        </div>
+
+    </section>
+    <!-- KEY SECTION -->
+
+    <section class="keyGrid">
+
+        <!-- PUBLIC KEY -->
+
+        <div class="card">
+
+            <div class="cardHeader">
+
+                <h2>
+
+                    <i class="fa-solid fa-key"></i>
+
+                    Public Key
+
+                </h2>
+
+                <div class="actionButtons">
+
+                    <button id="copyPublic">
+
+                        <i class="fa-regular fa-copy"></i>
+
+                    </button>
+
+                  
+                </div>
+
+            </div>
+
+            <textarea id="publicKey" readonly placeholder="Generated Public Key will appear here..."></textarea>
+
+        </div>
+
+        <!-- PRIVATE KEY -->
+
+        <div class="card">
+
+            <div class="cardHeader">
+
+                <h2>
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    Private Key
+
+                </h2>
+
+                <div class="actionButtons">
+
+                    <button id="copyPrivate">
+
+                        <i class="fa-regular fa-copy"></i>
+
+                    </button>
+
+                    
+
+                </div>
+
+            </div>
+
+            <textarea id="privateKey" readonly placeholder="Generated Private Key will appear here..."></textarea>
+
+        </div>
+
+    </section>
+    <!-- ENCRYPT SECTION -->
+
+    <section class="card encryptCard">
+
+        <h2>
+
+            <i class="fa-solid fa-lock"></i>
+
+            RSA Encryption
+
+        </h2>
+
+        <label>Enter Plain Text</label>
+
+        <textarea id="plainText" placeholder="Enter message to encrypt..."></textarea>
+
+        <p id="charCounter">
+
+            Characters: 0 / 214
+
+        </p>
+        <label>Enter Public Key</label>
+
+        <textarea id="encryptKey" placeholder="Paste Public Key here..."></textarea>
+
+
+
+        <button id="encryptBtn">
+
+            <i class="fa-solid fa-lock"></i>
+
+            Encrypt
+
+        </button>
+
+        <div class="cardHeader">
+
+            <label>Encrypted Text</label>
+
+            <div class="actionButtons">
+
+                <button id="copyEncrypted">
+
+                    <i class="fa-regular fa-copy"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <textarea id="encryptedText" readonly placeholder="Encrypted message will appear here..."></textarea>
+
+    </section>
+
+    <!-- DECRYPT SECTION -->
+
+    <section class="card encryptCard">
+
+        <h2>
+
+            <i class="fa-solid fa-unlock"></i>
+
+            RSA Decryption
+
+        </h2>
+
+        <label>Enter Encrypted Text</label>
+
+        <textarea id="decryptInput" placeholder="Paste encrypted text here..."></textarea>
+
+        <label>Enter Private Key</label>
+
+        <textarea id="decryptKey" placeholder="Paste Private Key here..."></textarea>
+
+
+
+        <button id="decryptBtn">
+
+            <i class="fa-solid fa-unlock"></i>
+
+            Decrypt
+
+        </button>
+
+        <label style="margin-top:25px;">Decrypted Text</label>
+
+        <textarea id="decryptedText" readonly placeholder="Original message will appear here..."></textarea>
+
+    </section>
+    <div id="toast"></div>
+    <footer>
+
+        <h3>
+
+            RSA Generator
+
+        </h3>
+
+        <p>
+
+            Built with HTML • CSS • JavaScript • Node.js • Express
+
+        </p>
+
+        <p>
+
+            Developed by <strong>Yash Chavhan</strong>
+
+        </p>
+
+        <p>
+
+            © 2026 All Rights Reserved
+
+        </p>
+
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
