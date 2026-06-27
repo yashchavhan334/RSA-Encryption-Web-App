@@ -1,7 +1,7 @@
 # 🔐 RSA Generator
-## Live Demo
+## 🌐 Live Demo
 
-https://rsa-encryption-web-app.onrender.com/
+👉 https://rsa-encryption-web-app.onrender.com/
 
 A modern RSA Encryption & Decryption Web Application built using **Node.js**, **Express.js**, **HTML**, **CSS**, and **JavaScript**.
 
@@ -41,11 +41,11 @@ This project allows users to generate RSA key pairs, encrypt plaintext using a p
 ## Screenshots
 ## Home
 
-![Home](screenshots/home.png)
+![Home](Screenshots/home.png)
 
 ## Key Generation
 
-![Generate](screenshots/generate-keys.png)
+![Generate](Screenshots/generate-rsa-keys.png)
 
 
 
@@ -75,13 +75,13 @@ RSA-Generator
 Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/rsa-generator.git
+git clone https://github.com/yashchavhan334/RSA-Encryption-Web-App.git
 ```
 
 Go into the project
 
 ```bash
-cd rsa-generator
+cd RSA-Encryption-Web-App
 ```
 
 Install dependencies
@@ -117,11 +117,6 @@ http://localhost:3000
 
 ---
 
-## 📷 Screenshots
-
-(Add screenshots after uploading the project.)
-
----
 
 ## 📄 License
 
