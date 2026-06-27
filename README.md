@@ -1,4 +1,7 @@
 # 🔐 RSA Generator
+## Live Demo
+
+https://rsa-encryption-web-app.onrender.com/
 
 A modern RSA Encryption & Decryption Web Application built using **Node.js**, **Express.js**, **HTML**, **CSS**, and **JavaScript**.
 
@@ -35,6 +38,16 @@ This project allows users to generate RSA key pairs, encrypt plaintext using a p
 - Crypto Module
 
 ---
+## Screenshots
+## Home
+
+![Home](screenshots/home.png)
+
+## Key Generation
+
+![Generate](screenshots/generate-keys.png)
+
+
 
 ## 📂 Project Structure
 
