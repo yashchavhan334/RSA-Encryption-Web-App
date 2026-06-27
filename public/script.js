@@ -110,20 +110,6 @@ encryptBtn.addEventListener("click", async () => {
 
     }
 
-    if (!encryptKey.value.trim()) {
-
-        showToast("Please enter Public Key", "#EF4444");
-
-        return;
-
-    }
-    if (!plainText.value.trim()) {
-
-        showToast("Enter a message", "#EF4444");
-
-        return;
-
-    }
 
     if (!encryptKey.value.trim()) {
 

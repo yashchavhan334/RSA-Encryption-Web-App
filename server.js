@@ -6,7 +6,7 @@ const rsaRoutes = require("./routes/rsa");
 
 const app = express();
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.json());
@@ -25,5 +25,5 @@ app.use("/rsa", rsaRoutes);
 
 // Start Server
 app.listen(PORT, () => {
-    console.log(`🚀 Server running on http://localhost:${PORT}`);
+    console.log(`🚀 Server running on port ${PORT}`);
 });
